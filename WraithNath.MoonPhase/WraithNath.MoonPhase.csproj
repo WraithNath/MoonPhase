@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8F813A9-C9C8-4267-9410-B882B0C34877}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WraithNath.MoonPhase</RootNamespace>
+    <AssemblyName>WraithNath.MoonPhase</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\80_Wan_Cres.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\AutoRunHelper.cs" />
+    <Compile Include="Engine\MoonEngine.cs" />
+    <Compile Include="Engine\ResourceManager.cs" />
+    <Compile Include="Engine\StateManager.cs" />
+    <Compile Include="Forms\frmPickDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPickDate.Designer.cs">
+      <DependentUpon>frmPickDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Moon\JulianDate.cs" />
+    <Compile Include="Moon\MoonAge.cs" />
+    <Compile Include="Moon\MoonPhase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests.cs" />
+    <EmbeddedResource Include="Forms\frmPickDate.resx">
+      <DependentUpon>frmPickDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00_NewMoon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\06_Wax_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Wax_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13_Wax_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_Wax_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20_Wax_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23_Wax_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46_Wax_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50_FullMoon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53_Wan_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56_Wan_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60_Wan_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63_Wan_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66_Wan_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\73_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\86_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99_Wan_Cres.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70_Wan_Gib.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83_Wan_Cres.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
